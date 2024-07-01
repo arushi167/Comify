@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="contact-area ptb-80 mt-20">
+  <div class="container ">
+    <!-- Contact Info Cards: start -->
+    <div class="row justify-content-center mb-12">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="contact-info-box">
+          <div class="icon"><svg class="contact_icon_center" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg></div>
+          <h3>Mail Here</h3>
+          <p><a href="mailto:info@witeso.com">info@witeso.com</a></p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="contact-info-box">
+          <div class="icon"><svg class="contact_icon_center" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg></div>
+          <h3>Office Address</h3>
+          <p>South Delhi, Delhi 110019, India</p>
+        </div>
+      </div>
+      <!-- <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="contact-info-box">
+          <div class="icon"><svg class="contact_icon_center" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg></div>
+          <h3>Call Here</h3>
+          <p><a href="tel:+1234567890">+91 638754XXXX</a></p>
+        </div>
+      </div> -->
+    </div>
+    <!-- Contact Info Cards: end -->
+
+    <div class="section-title">
+      <h2>Get In Touch With Us</h2>
+      <div class="bar"></div>
+      <p>Anything On your Mind. We’ll Be Glad To Assist You!</p>
+      <div class="shape1"><img alt="shape" loading="lazy" width="202" height="202" decoding="async" data-nimg="1"
+          src="/static/img/shape1.png" style="color: transparent;"></div>
+      <div class="shape2 rotateme"><img alt="shape" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+          src="/static/img/shape2.svg" style="color: transparent;"></div>
+      <div class="shape3"><img alt="shape" loading="lazy" width="28" height="28" decoding="async" data-nimg="1"
+          src="/static/img/shape3.svg" style="color: transparent;"></div>
+      <div class="shape4"><img alt="shape" loading="lazy" width="21" height="20" decoding="async" data-nimg="1"
+          src="/static/img/shape4.svg" style="color: transparent;"></div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-12"><img alt="image" loading="lazy" width="685" height="494" decoding="async"
+          data-nimg="1" src="/static/img/contact_img.png" style="color: transparent;"></div>
+      <div class="col-lg-6 col-md-12">
+        <form method="post">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="form-group"><input type="text" name="name" placeholder="Your Name" class="form-control"
+                  required="" value=""></div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <div class="form-group"><input type="text" name="email" placeholder="Your email address"
+                  class="form-control" required="" value=""></div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group"><input type="text" name="number" placeholder="Your phone number"
+                  class="form-control" required="" value=""></div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                {% if subject %}
+                <input type="text" name="subject" placeholder="Your Subject" class="form-control" required=""
+                  value="{{subject|upper}}" readonly>
+                {% else %}
+                <input type="text" name="subject" placeholder="Your Subject" class="form-control" required="" value="">
+                {% endif %}
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <div class="form-group"><textarea name="message" cols="30" rows="5" placeholder="Write your message..."
+                  class="form-control" required=""></textarea></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="flexCheckDefault"
+                  value=""><label class="form-check-label" for="flexCheckDefault">By checking this, you agree to our <a
+                    href="/terms_of_service">Terms</a> and <a href="/privacy">Privacy policy</a>.</label></div>
+            </div>
+            {{ recaptcha }}
+            <div class="col-lg-12 col-sm-12"><button type="submit" class="mt-4 btn btn-primary">Send Message</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if message %}
+<div class="fixed z-10 inset-0 overflow-y-auto">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div class="fixed inset-0 transition-opacity">
+      <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+    <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+      <div>
+        <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+          <!-- Heroicon name: check -->
+          {% if message.type == "success" %}
+          <svg class="h-6 w-6 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          {% else %}
+          <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+          {% endif %}
+        </div>
+        <div class="mt-3 text-center sm:mt-5">
+          <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+            {{message.heading}}
+          </h3>
+          <div class="mt-2">
+            <p class="text-sm leading-5 text-gray-500">
+              {{message.text}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 sm:mt-6">
+        <span class="flex w-full rounded-md shadow-sm">
+          <a href="/contact" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-indigo-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+            Ok
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock body %}

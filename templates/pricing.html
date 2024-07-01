@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<link rel="stylesheet" href="/static/css/about_us.css">
+{% endblock header %}
+
+{% block body %}
+<div style="height: 20%;"></div>
+<div class="pricing-area">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Pricing Plan</h2>
+        <div class="bar"></div>
+        <p class="text-lg">Explore Our flexible pricing for tailored solutions that fit your budget.</p>
+        <p class="text-lg">These Digital Credits can be used to access our SAAS Products</p>
+      </div>
+      <div class="pricing-tab bg-color" data-rttabs="true">
+
+        <div class="flex justify-center mb-12 ">
+            <div class="p-4 pl-6 pr-6 rounded-lg"  style="background: #0e314c;color: white;">Our Credit Plans</div>
+        </div>
+        
+        <div class="react-tabs__tab-panel react-tabs__tab-panel--selected" role="tabpanel" id="panel:r1:0" aria-labelledby="tab:r1:0">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500" data-aos-once="true">
+              <div class="pricing-box">
+                <div class="pricing-header">
+                  <h3>Free</h3>
+                  <p>Get your business up <br> and running</p>
+                </div>
+                <div class="price">₹0 <span>/500</span></div>
+                <div class="buy-btn"><a class="btn btn-primary" href="/login">Get Started Free</a></div>
+                <ul class="pricing-features">
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Drag &amp; Drop Builder</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Lead Generation &amp; Sales</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Boot &amp; Digital Assistants</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Customer Service</li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="500" data-aos-once="true">
+              <div class="pricing-box">
+                <div class="pricing-header">
+                  <h3>Pro</h3>
+                  <p>Get your business up <br> and running</p>
+                </div>
+                <div class="price">₹10 <span>/200</span></div>
+                <form method="post">
+                  <input hidden type="number" value="10" name="amt"/>
+                <div class="buy-btn"><button class="btn btn-primary" type="submit">Buy Now</button></div>
+                </form>
+                <ul class="pricing-features">
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Drag &amp; Drop Builder</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Lead Generation &amp; Sales</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Boot &amp; Digital Assistants</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Customer Service</li>
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500" data-aos-once="true">
+              <div class="pricing-box">
+                <div class="pricing-header">
+                  <h3>Premium</h3>
+                  <p>Get your business up <br> and running</p>
+                </div>
+                <div class="price">₹50 <span>/1500</span></div>
+                <form method="post">
+                  <input hidden type="number" value="50" name="amt"/>
+                <div class="buy-btn"><button class="btn btn-primary" type="submit">Buy Now</button></div>
+                </form>
+                <ul class="pricing-features">
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Drag &amp; Drop Builder</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Lead Generation &amp; Sales</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Boot &amp; Digital Assistants</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg> Customer Service</li>
+                    
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="react-tabs__tab-panel" role="tabpanel" id="panel:r1:1" aria-labelledby="tab:r1:1"></div>
+      </div>
+    </div>
+    <div class="shape1"><img alt="shape" loading="lazy" width="202" height="202" decoding="async" data-nimg="1" src="https://startp-next.envytheme.com/_next/static/media/shape1.754ca456.png" style="color: transparent;"></div>
+    <div class="shape2 rotateme"><img alt="shape" loading="lazy" width="22" height="22" decoding="async" data-nimg="1" src="https://startp-next.envytheme.com/_next/static/media/shape2.97b18c7a.svg" style="color: transparent;"></div>
+    <div class="shape3"><img alt="shape" loading="lazy" width="28" height="28" decoding="async" data-nimg="1" src="https://startp-next.envytheme.com/_next/static/media/shape3.4bffeff9.svg" style="color: transparent;"></div>
+    <div class="shape4"><img alt="shape" loading="lazy" width="21" height="20" decoding="async" data-nimg="1" src="https://startp-next.envytheme.com/_next/static/media/shape4.0580e2ef.svg" style="color: transparent;"></div>
+    <div class="shape7"><img alt="shape" loading="lazy" width="21" height="20" decoding="async" data-nimg="1" src="https://startp-next.envytheme.com/_next/static/media/shape4.0580e2ef.svg" style="color: transparent;"></div>
+    <div class="shape8 rotateme"><img alt="shape" loading="lazy" width="22" height="22" decoding="async" data-nimg="1" src="https://startp-next.envytheme.com/_next/static/media/shape2.97b18c7a.svg" style="color: transparent;"></div>
+  </div>
+
+  {% block card %}{% endblock card %}
+
+  {% if pdata %}
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+  var options = {
+      "key": "{{RAZORPAY_ID}}",
+      "amount": "{{pdata[0]}}",
+      "currency": "INR",
+      "name": "Witeso",
+      "description": "Buy Digital Credits",
+      "image": "https://www.witeso.com/static/img/witeso_logo.png",
+      "order_id": "{{pdata[1]}}", 
+      "callback_url": "/success",
+      "prefill": {
+          "name": "{{session['user_full_name']}}",
+          "email": "{{session['email']}}",
+          // "contact": "9000090000"
+      },
+      // "notes": {
+      //     "address": "Razorpay Corporate Office"
+      // },
+      "theme": {
+          "color": "#5cffab"
+      }
+  };
+  var rzp1 = new Razorpay(options);
+  rzp1.open();
+  </script> 
+  {% endif %}
+{% endblock body %}

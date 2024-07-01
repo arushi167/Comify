@@ -1,0 +1,183 @@
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WITESO | We Innovation Tech Solutions | IT Service Company</title>
+        <meta name="next-head-count" content="3"><noscript data-n-css=""></noscript>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/index.css">
+        <link rel="stylesheet" href="/static/css/custom.css">
+        <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+        {% block header %}{% endblock header %}
+    </head>
+
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPLCFD4HB6"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PPLCFD4HB6');
+        </script>
+        <div id="__next">
+            <main class="__className_6d1a03">
+                <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none">
+                </div>
+                <div onclick="scrollToTop()">
+                    <div class="go-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <line x1="12" y1="19" x2="12" y2="5"></line>
+                            <polyline points="5 12 12 5 19 12"></polyline>
+                        </svg></div>
+                </div>
+                <header id="header" class="headroom is-sticky">
+                    <div class="witeso-nav">
+                        <div class="container">
+                            <nav class="navbar navbar-expand-md navbar-light">
+                                <a class="navbar-brand" href="/"><img width="150px" src="/static/img/witeso_logo_bgrm.png" /></a>
+                                <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"><img src="/static/img/nav-menu.png" alt=""></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/about_us">About</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/pricing">Pricing</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                                        {% if session %}
+                                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                                        {% endif %}
+                                    </ul>
+                                    <div class="others-option">
+                                        <a class="btn btn-light" href="/contact">Support</a>
+                                        {% if session %}
+                                        <a class="btn btn-primary">Credit {{session['credit']}}!</a>
+                                        {% else %}
+                                        <a class="btn btn-primary" href="/login">Login</a>      
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Main Body: start -->
+                {% block body %}{% endblock body %}
+                <!-- Main Body: end -->
+
+                <footer class="footer-area bg-f7fafd">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="100"
+                                data-aos-duration="500" data-aos-once="true">
+                                <div class="single-footer-widget">
+                                    <div class="logo">
+                                        <h1><a href="/"><img width="250px" src="/static/img/witeso_logo_bgrm.png" /></a></h1>
+                                    </div>
+                                    <p>Your Gateway to Innovative Tech Solutions. From web and Android development to
+                                        machine learning and cybersecurity, we craft tailored solutions for your digital
+                                        success. Explore our projects and unleash the power of technology today.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="200"
+                                data-aos-duration="500" data-aos-once="true">
+                                <div class="single-footer-widget ps-5">
+                                    <h3>Company</h3>
+                                    <ul class="list">
+                                        <li><a href="/about_us">About Us</a></li>
+                                        <li><a href="/cancellation_and_refund">Cancellation & Refund</a></li>
+                                        <li><a href="/shipping_and_delivery">Shipping & Delivery</a></li>
+                                        <li><a href="/pricing">Our Pricing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="300"
+                                data-aos-duration="500" data-aos-once="true">
+                                <div class="single-footer-widget">
+                                    <h3>Support</h3>
+                                    <ul class="list">
+                                        <li><a href="/privacy">Privacy Policy</a></li>
+                                        <li><a href="/terms_of_service">Terms &amp; Conditions</a></li>
+
+                                        <li><a href="/contact">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="fade-in" data-aos-delay="400"
+                                data-aos-duration="500" data-aos-once="true">
+                                <div class="single-footer-widget">
+                                    <h3>Address</h3>
+                                    <ul class="footer-contact-info">
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path
+                                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                </path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg>Email: <a href="mailto:info@witeso.com">info@witeso.com</a></li>
+                                    </ul>
+                                    <ul class="social-links">
+                                        <li><a href="https://www.facebook.com/" class="facebook" target="_blank"><svg class="footer-icon-center"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <path
+                                                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                                    </path>
+                                                </svg></a></li>
+                                        <li><a href="https://www.twitter.com/" class="twitter" target="_blank"><svg class="footer-icon-center"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <path
+                                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                                    </path>
+                                                </svg></a></li>
+                                        <li><a href="https://www.instagram.com/" class="instagram" target="_blank"><svg class="footer-icon-center"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                                </svg></a></li>
+                                        <li><a href="https://www.linkedin.com/company/witeso" class="linkedin"
+                                                target="_blank"><svg class="footer-icon-center" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path
+                                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                                    </path>
+                                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                                    <circle cx="4" cy="4" r="2"></circle>
+                                                </svg></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="copyright-area">
+                                    <p>Copyright © 2024 WITESO. All rights reserved by <a href="https://witeso.com/"
+                                            target="_blank">WITESO</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><img alt="map" loading="lazy" width="910" height="443" decoding="async" data-nimg="1" class="map"
+                        src="/static/img/map.png" style="color: transparent;">
+                    <div class="shape1"><img alt="shape" loading="lazy" width="202" height="202" decoding="async"
+                            data-nimg="1" src="/static/img/shape1.png" style="color: transparent;"></div>
+                    <div class="shape8 rotateme"><img alt="shape" loading="lazy" width="22" height="22" decoding="async"
+                            data-nimg="1" src="/static/img/shape2.svg" style="color: transparent;"></div>
+                </footer>
+            </main>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/static/js/custom.js"></script>
+    </body>
+</html>

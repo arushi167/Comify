@@ -1,0 +1,44 @@
+/* Scroll up button start */
+.go-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    /* Adjust as needed */
+}
+
+.go-top svg {
+    width: 24px;
+    /* Adjust size as needed */
+    height: 24px;
+    /* Adjust size as needed */
+}
+/* Scroll up button end */
+
+/* Footer icon ceter : start */
+.footer-icon-center{
+    margin: 10% 0 0 22%;
+}
+
+.contact_icon_center{
+  margin: 33% 0 0 33%;
+}
+
+/* Footer icon ceter : end */
+
+/* Project card : start */
+.card {
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 6px rgba(173, 156, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .grid {
+    gap: 50px; /* Adjust this value to increase or decrease the gap between the cards */
+  }
+  
+/* Project card : end */
