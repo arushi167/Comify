@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comic Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css'>
+    <link rel="stylesheet" href="static/css/comic_animation.css">
+</head>
+
+<body>
+    <div class="comic-container">
+        <div class="container">
+            <div class="flip-book" id="demoBookExample">
+                {% for img_path in comic_list %}
+                    {% if loop.first %}
+                        <div class="page page-cover page-cover-top">
+                            <div class="page-content">
+                                <img class="img" src="{{ img_path }}" alt="">
+                                <div class="cover-content">{{ topic }}</div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="page">
+                            <div class="page-content">
+                                <img class="img" src="{{ img_path }}" alt="">
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <div class="page page-cover page-cover-bottom">
+                    <div class="end-page">
+                        <div class="brought-you-by">
+                            Brought To You By Team Malaai
+                        </div>
+                        <div class="flex flex-col items-center justify-center h-5 makepayment_btn" >
+                            <button class="bg-blue-500 text-white py-2 px-4 rounded mb-auto" onclick=make_payment()>Download PDF</button><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js'></script>
+    <script>
+        function make_payment(){
+            var pdflink = '{{ pdf_link }}';
+            window.location.href=`/pay?pdf=${encodeURIComponent(pdflink)}`
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const pageFlip = new St.PageFlip(
+                document.getElementById("demoBookExample"),
+                {
+                    width: 440,
+                    height: 650,
+                    size: "stretch",
+                    minWidth: 315,
+                    maxWidth: 1000,
+                    minHeight: 420,
+                    maxHeight: 1350,
+
+                    maxShadowOpacity: 0.2,
+                    showCover: true,
+                    mobileScrollSupport: false
+                }
+            );
+
+            pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+
+            document.querySelector(".page-total").innerText = pageFlip.getPageCount();
+
+            document.querySelector(".btn-prev").addEventListener("click", () => {
+                pageFlip.flipPrev();
+            });
+
+            document.querySelector(".btn-next").addEventListener("click", () => {
+                pageFlip.flipNext();
+            });
+
+            pageFlip.on("flip", (e) => {
+                document.querySelector(".page-current").innerText = e.data + 1;
+            });
+
+            pageFlip.on("changeState", (e) => {
+                document.querySelector(".page-state").innerText = e.data;
+            });
+
+            pageFlip.on("changeOrientation", (e) => {
+                document.querySelector(".page-orientation").innerText = e.data;
+            });
+        });
+    </script>
+</body>
+
+</html>

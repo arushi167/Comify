@@ -1,0 +1,111 @@
+<html data-theme="light" style="--100vh: 715px; color-scheme: light;">
+
+<head>
+    <meta charset="utf-8">
+    <title>Comify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta
+        content="">
+    <meta content="Comify" property="og:title">
+    <meta
+        content=""
+        property="og:description">
+    <meta content="/static/img/logo.png" property="og:image">
+    <meta content="Comify" property="twitter:title">
+    <meta
+        content=""
+        property="twitter:description">
+    <meta content="/static/img/logo.png" property="twitter:image">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+
+<body style="scroll-behavior:smooth">
+    <div class="css-1g4yje1 m-2">
+        <!-- start: Home -->
+        <div class="dropdown css-sdpt9e" data-topbar="true">
+            <button type="button" class="css-1ayjrty dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="chakra-button__icon css-1wh2kri">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="house"
+                        class="svg-inline--fa fa-house fa-xs " role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M567.5 229.7C577.6 238.3 578.9 253.4 570.3 263.5C561.7 273.6 546.6 274.9 536.5 266.3L512 245.5V432C512 476.2 476.2 512 432 512H144C99.82 512 64 476.2 64 432V245.5L39.53 266.3C29.42 274.9 14.28 273.6 5.7 263.5C-2.875 253.4-1.634 238.3 8.473 229.7L272.5 5.7C281.4-1.9 294.6-1.9 303.5 5.7L567.5 229.7zM144 464H192V312C192 289.9 209.9 272 232 272H344C366.1 272 384 289.9 384 312V464H432C449.7 464 464 449.7 464 432V204.8L288 55.47L112 204.8V432C112 449.7 126.3 464 144 464V464zM240 464H336V320H240V464z">
+                        </path>
+                    </svg>
+                </span>Home
+            </button>
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item">{{ full_name }}</a></li>
+                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            </ul>
+        </div>
+        <!-- end: Home -->
+
+        <div class="blob css-1p7rnhe">
+            <img src="/static/img/bg.jpg" width="100%" height="100%" style="opacity: 0.6;">
+        </div>
+
+        <div class="css-fguf5i">
+            <div class="css-2rkiaf">
+                <div data-chat-step-0="true" class="css-1w1vbxm" style="opacity: 1; transform: none;">
+                    <div class=" css-1b83vig">
+                        <div class="css-172ti6o"><span role="img" aria-label="wave">👋</span> Hello {{ full_name }}, What topic are you interested in learning?
+                        </div>
+                    </div>
+                </div>
+                <div data-chat-step-3="true" class="css-1bvc4cc" style="opacity: 1; transform: none;">    
+                    <div class=" css-a9945a">
+                        <div class="css-172ti6o">
+                            <div class="css-1glzqji">
+                                <label for="comic_style">Comic Style</label>
+                                <select id="comic_style" name="comic_style" class="chakra-textarea css-bxqpz7" style="height: 38px;" />
+                                    <option name="Marvel">Marvel</option>
+                                    <option name="DC Comics">DC Comics</option>
+                                    <option name="Anime">Anime</option>
+                                    <option name="Disney Princes">Disney Princes</option>
+                                </select>
+                                <label for="comic_language">Language</label>
+                                <select id="comic_language" name="lang" class="chakra-textarea css-bxqpz7" style="height: 38px;" />
+                                {% for lang in lang_list %}
+                                    <option name="{{lang}}">{{lang}}</option>
+                                {% endfor %}
+                                    
+                                </select>
+                                <div class="chakra-input__group css-bx0blc" data-group="true">
+                                    
+                                    <input id="topic" name="topic" placeholder="Type a topic e.g. Blockchain" class="chakra-textarea css-bxqpz7" style="height: 38px;" />
+                                    <div class="chakra-input__right-element css-112oyor">
+                                        <button id="submit_btn" type="button" class="css-16uauux" aria-label="Submit">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                                data-icon="paper-plane-top"
+                                                class="svg-inline--fa fa-paper-plane-top fa-fw " role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M511.1 255.1c0 12.8-7.625 24.38-19.41 29.41L44.6 477.4c-4.062 1.75-8.344 2.594-12.59 2.594c-8.625 0-17.09-3.5-23.28-10.05c-9.219-9.766-11.34-24.25-5.344-36.27l73.66-147.3l242.1-30.37L77.03 225.6l-73.66-147.3C-2.623 66.3-.4982 51.81 8.72 42.05c9.25-9.766 23.56-12.75 35.87-7.453L492.6 226.6C504.4 231.6 511.1 243.2 511.1 255.1z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="css-14x7tbb">
+                                    <div class="css-13d6pca">
+                                        <p class="css-0" id="text_count">0/70</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

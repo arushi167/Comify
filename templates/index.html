@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/page1.css">
+<link rel="stylesheet" href="/static/css/page2.css">
+<link rel="stylesheet" href="/static/css/page3.css">
+<link rel="stylesheet" href="/static/css/page4.css">
+<link rel="stylesheet" href="/static/css/animation.css">
+<title>Comify</title>
+<style>
+    
+    @media screen and (min-width: 768px) {
+        .navbar {
+            width: 60%;
+        }
+        .hero-section {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .hero-content {
+            margin-bottom: 0;
+            text-align: left;
+        }
+        
+    }
+    .animated-gradient-bg {
+            height: 100vh;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffecd2);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+</style>
+</head>
+<body class="bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 bg-opacity-90">
+    <div class="page-1">
+        <nav class="navbar bg-white py-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <div class="navbar-logo">
+                    <span class="text-lg font-semibold">Comify</span>
+                </div>
+    
+                <!-- Navbar Items -->
+                <div class="navbar-items flex-grow text-center">
+                    <a href="#home" class="navbar-item">Home</a>
+                    <a href="#problem-statement" class="navbar-item">Problem Statement</a>
+                    <a href="#our-solution" class="navbar-item">Our Solution</a>
+                    <a href="#features" class="navbar-item">Features Offered</a>
+                </div>
+    
+                <!-- Login -->
+                <div class="navbar-login text-center">
+                    <a href="/login" class="text-lg px-8 font-semibold">Login</a>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="hero-section">
+            <div class="gif-container">
+                <img src="/static/img/sign_gif.gif" alt="Comic GIF" class="hero-gif">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Explore the World of Comics</h1>
+                <p class="hero-description">Transform boring and taboo content into fun, interesting, and visually appealing comics with Comify.</p>
+                <a href="/login" class="login-button">Login</a>
+            </div>
+        </div>
+    </div>
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+          <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+          <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+          <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+        </div>
+      </div>
+      <!--Waves end-->
+
+      <h3 class="text-center mt-16 mb-4 text-5xl  text-white bg-clip-text">Problem Statement</h3>
+    <div>
+        <!-- Page 2 -->
+        <div class="page2 py-10 px-4 md:px-10 w-80 md:w-full mx-auto my-5 rounded-lg" id="problem-statement">
+            <p class="problem-info text-lg text-center leading-relaxed mb-8">Nowadays students face problems due to low attention span, which is less than a goldfish (9 sec & humans have 8 sec). <br> Also, it is very hard to spread awareness about topics which are considered “taboo” in our society such as periods, superstitions, sex education, etc. <br> As per studies conducted in the US by NCBI, suggested that approx. 65% of the population are visual learners. <br> So learning from textual content leads to : </p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+                <div class="problem-card w-full md:w-72 p-4 md:p-6 bg-white rounded-lg shadow-md text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfXxF67kXsrbzeAZ8VbmNe_LW6_EQQElBjw&s" alt="Difficulty in Conceptualization" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Difficulty in Conceptualization</h3>
+                    <p class="text-base">Students find it hard to understand and conceptualize complex topics.</p>
+                </div>
+                <div class="problem-card w-full md:w-72 p-4 md:p-6 bg-white rounded-lg shadow-md text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlmp8_wOU6I5EQywZ5idGI5fIJaw1HeszxtA&s" alt="Reduced Retention" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Reduced Retention</h3>
+                    <p class="text-base">Information retention is low due to lack of engagement.</p>
+                </div>
+                <div class="problem-card w-full md:w-72 p-4 md:p-6 bg-white rounded-lg shadow-md text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlwE3w6ltyJsM9CI-C_P1aT10b8u3rG0mqXg&s" alt="Limited Engagement" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Limited Engagement</h3>
+                    <p class="text-base">Students are less engaged with traditional teaching methods.</p>
+                </div>
+                <div class="problem-card w-full md:w-72 p-4 md:p-6 bg-white rounded-lg shadow-md text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_yH175XLa-MNch0csvmIoIgrOKZ-0petSA&s" alt="Difficulty in Problem-Solving" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Difficulty in Problem-Solving</h3>
+                    <p class="text-base">Students struggle with applying knowledge to solve problems.</p>
+                </div>
+                <div class="problem-card w-full md:w-72 p-4 md:p-6 bg-white rounded-lg shadow-md text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ-_cyqE5oYs4d9PhOOUaA6x166qwR9XcNzg&s" alt="Limited Creativity and Expression" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Limited Creativity and Expression</h3>
+                    <p class="text-base">There's little room for creative thinking and self-expression.</p>
+                </div>
+                <div class="problem-card w-full md:w-72 p-4 md:p-6 bg-white rounded-lg shadow-md text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmU5kERc6w0AXEnlpA3fVOsrmw5jayFXwh7g&s" alt="Increased Cognitive Load" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold mb-2">Increased Cognitive Load</h3>
+                    <p class="text-base">Students experience high cognitive load when learning.</p>
+                </div>
+                <!-- Add more problem cards here -->
+            </div>
+        </div>
+        
+        </div>
+        <h3 class="text-center mt-20 mb-8 text-5xl text-white bg-clip-text">Our Solution</h3>
+
+<!-- page 3 -->
+<div class="page3 py-10 px-4 md:px-10 w-80 md:w-full mx-auto my-10 rounded-lg" id="our-solution">
+    <div class="space-y-8">
+        <!-- Box 1 -->
+        <div class="bg-white rounded-lg p-6">
+            <!-- Paragraph with Image 1 -->
+            <div class=" fade flex flex-col-reverse md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="flex-1">
+                    <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/20044/images/cab3bd2-686e-1c8b-126-f4363cf3fcbe_pexels-mikhail-nilov-8342186.jpg" alt="MAGNO Image" class="max-w-full h-auto">
+                </div>
+                <div class="flex-1">
+                    <p class="text-2xl leading-relaxed text-gradient bg-clip-text bg-gradient-to-r from-red-500 to-pink-500 text-transparent">Our idea is to build Gen AI powered platform, which will convert boring textual content or taboo topics to visually appealing comics/manga.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Box 2 -->
+        <div class="bg-white rounded-lg p-6">
+            <!-- Paragraph with Image 2 -->
+            <div class="fade  flex flex-col-reverse md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mt-4">
+                <div class="flex-1">
+                    <p class="text-2xl leading-relaxed text-gradient bg-clip-text bg-gradient-to-r from-red-500 to-pink-500 text-transparent">User can specify plot & characters of the storyline or just enter a topic and it will generate a comic book as per their comic style i.e. Marvel, DC, Disney Princess, Anime etc.</p>
+                </div>
+                <div class="flex-1">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-6a648838e80e15c41d30e00156210861-lq" alt="Balanced Strategy Image" class="ml-12 w-200 h-80">
+                </div>
+            </div>
+        </div>
+        <!-- Box 3 -->
+        <div class="bg-white rounded-lg p-6">
+            <!-- Paragraph with Image 3 -->
+            <div class="pb-8 fade flex flex-col-reverse md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mt-4">
+                <div class="flex-1">
+                    <img src="https://itsm.tools/wp-content/uploads/2023/04/chat-gpt.png" alt="LTC Algorithms Image" class="max-w-full h-auto">
+                </div>
+                <div class="flex-1">
+                    <p class="margin text-2xl leading-relaxed text-gradient bg-clip-text bg-gradient-to-r from-red-500 to-pink-500 text-transparent">Our platform will utilize image-to-image transformations using Stable Diffusion or Gen AI models.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <h3 class="text-center mt-16  text-5xl text-white bg-clip-text" id="features">Features</h3>
+<!-- page 4 -->
+    <div class="mb-10 w-full feature-container mx-auto mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Feature Card 1 -->
+            <div class="feature-card bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://i.etsystatic.com/17382525/r/il/14170a/4744616254/il_570xN.4744616254_aj0v.jpg" alt="Feature 1" class="w-full h-48 object-cover object-center">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Ability to set custom characters and story plot</h3>
+                    <p class="text-gray-700">Users can personalize their comics by setting their own characters and storyline, adding uniqueness to their creations.</p>
+                </div>
+            </div>
+    
+            <!-- Feature Card 2 -->
+            <div class="feature-card bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://store-images.s-microsoft.com/image/apps.8374.14162947098762775.bea66d8b-2f14-49d3-b715-31559d6483bd.8387b69a-e758-4c32-8acd-7a00e7476f5b?h=464" alt="Feature 2" class="w-full h-48 object-cover object-center">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Generate Shareable comic link or share comic pdf</h3>
+                    <p class="text-gray-700">After creating their comic, users can generate a shareable link or download the comic as a PDF file to easily share it with others.</p>
+                </div>
+            </div>
+    
+            <!-- Feature Card 3 -->
+            <div class="feature-card bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://georgetownvoice.com/wp-content/uploads/2023/03/MV5BYzcyMDFlOGQtOTQ5MS00MTVlLTgwNTMtZTk1ZTdjZjVmMWQ2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="Feature 3" class="w-full h-48 object-cover object-center">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Enhances user experience with realistic animations</h3>
+                    <p class="text-gray-700">The platform provides realistic animations such as page turning and book opening/closing, creating an immersive digital reading environment for users.</p>
+                </div>
+            </div>
+    
+            <!-- Feature Card 4 -->
+            <div class="feature-card bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2022/09/Vernacular_1.png" alt="Feature 4" class="w-full h-48 object-cover object-center">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Ability to create vernacular comics</h3>
+                    <p class="text-gray-700">Users can create comics in their preferred language, including Hindi, English, Tamil, etc., catering to diverse audiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-white border-t pt-4 pb-4">All rights reserved by Team Malaai  ^_^</footer>
+    
+    <script>
+    // JavaScript to toggle the visibility of navbar items when hamburger icon is clicked
+    document.getElementById('navbar-toggle').addEventListener('click', function () {
+        var navbarItems = document.querySelector('.navbar-items');
+        navbarItems.classList.toggle('hidden');
+    });
+    
+</script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>

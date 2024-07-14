@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+}
+.img{
+    height: 40rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+   
+}
+
+.container{
+    width: 60vw;
+    margin: auto;
+    /* height: 100vh; */
+}
+.flip-book {
+    display: none;
+    background-size: cover;
+    margin: 1rem;
+}
+.cover-content{
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    background-color: #222;
+    padding: 4px 10px 4px 2px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.brought-you-by{
+    margin-top: 1%;
+    padding: 10%;
+    font-size: larger;
+}
+
+.makepayment_btn {
+    margin-top: 5rem !important;
+    font-size: medium !important;
+    height: 2rem !important;
+    width: 100% !important;
+}
+
+.stf-wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+.page {
+    padding: 20px;
+    background-color: #fdfaf7;
+    color: #785e3a;
+    border: solid 1px #c2b5a3;
+    overflow: hidden;
+}
+
+.page .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.page .page-content .page-header {
+    height: 30px;
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.page .page-content .page-text {
+    height: 10%;
+    flex-grow: 1;
+    font-size: 80%;
+    text-align: justify;
+    margin-top: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-top: solid 1px #f4e8d7;
+}
+
+.page .page-content .page-footer {
+    height: 30px;
+    border-top: solid 1px #f4e8d7;
+    font-size: 80%;
+    color: #998466;
+}
+
+.page.--left {
+    border-right: 0;
+    box-shadow: inset -7px 0 30px -7px rgba(0, 0, 0, 0.4);
+}
+
+.page.--right {
+    border-left: 0;
+    box-shadow: inset 7px 0 30px -7px rgba(0, 0, 0, 0.4);
+}
+
+.page.--right .page-footer {
+    text-align: right;
+}
+
+.page.hard {
+    background-color: #f2e8d9;
+    border: solid 1px #998466;
+}
+
+.page.page-cover {
+    background-color: #222;
+    color: white;
+    border: solid 1px #998466;
+}
+
+.page.page-cover  {
+    text-align: center;
+    font-size: 210%;
+}
+
+.page.page-cover.page-cover-top {
+    box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), -2px 0 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.page.page-cover.page-cover-bottom {
+    box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), 10px 0 8px 0px rgba(0, 0, 0, 0.4);
+}
+.end-page{
+    margin: auto;
+}
